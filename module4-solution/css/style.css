@@ -1,0 +1,38 @@
+* {
+    margin:0;
+}
+
+body{
+    text-align: center;
+}
+.container {
+    max-width: 900px;
+}
+
+.badge{
+    margin:10px 10px;
+    padding: 10px 10px;
+    font-size: 1.3em
+}
+
+summary {
+    outline: none;
+    font-weight: bold;
+}
+details >p {
+    margin-left: 2em;
+
+}
+
+ui-view {
+    text-align:left;
+}
+
+
+ui-view > h3, h1 {
+    text-align:center;
+}
+
+a:hover{
+    text-decoration: none;
+}

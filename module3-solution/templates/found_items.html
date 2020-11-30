@@ -1,4 +1,4 @@
-<div>
+<div ng-if="list.items">
     <ul id="found-items">
         <li class="list-group-item" ng-repeat="item in list.items">
             <ul class="innerlist">
@@ -10,3 +10,4 @@
         
     </ul>
 </div>
+<div ng-if="list.errorMsg">Error: {{list.errorMsg}}</div>
