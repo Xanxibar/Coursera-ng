@@ -1,0 +1,30 @@
+<div class="container">
+<div ng-if="!$ctrl.user.fname">
+  <p>Not Signed Up Yet.<a ui-sref="public.signup"> Sign up Now!</a></p>
+</div>
+
+<div ng-if="$ctrl.user.fname">
+  <h2>My Information</h2>
+  <p>Name: {{$ctrl.user.fname}} {{$ctrl.user.lname}}</p>
+  <p>Email: {{$ctrl.user.email}}</p>
+  <p>Phone number: {{$ctrl.user.phone}}</p>
+ <hr>
+<h2> Your Favorite Menu item</h2> 
+  <div class="menu-item-tile col-md-6">
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="menu-item-photo">
+          <div>{{$ctrl.fav.name}}</div>
+          <img class="img-responsive" width="250" height="150" ng-src="{{$ctrl.basePath}}/images/{{$ctrl.fav.short_name}}.jpg" alt="{{$ctrl.fav.name}}">
+        </div>
+        <div class="menu-item-price">{{$ctrl.fav.price_small | currency}}<span> {{$ctrl.fav.small_portion_name}}</span> {{$ctrl.fav.price_large | currency}} <span>{{$ctrl.fav.large_portion_name}}</span></div>
+      </div>
+      <div class="menu-item-description col-sm-7">
+        <h3 class="menu-item-title">{{$ctrl.fav.name}}</h3>
+        <p class="menu-item-details">{{$ctrl.fav.description}}</p>
+      </div>
+    </div>
+    <hr class="visible-xs">
+  </div>
+</div>
+</div>
