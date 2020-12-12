@@ -20,6 +20,7 @@
         $ctrl.email = "";
         $ctrl.phone = "";
         $ctrl.fav = "";
+        $ctrl.registered = false;
 
         $ctrl.submit = function(){
             var user = {
@@ -31,11 +32,7 @@
             }
           signup.storeUser(user)
           signup.user = user
-          $ctrl.fname = "";
-        $ctrl.lname = "";
-        $ctrl.email = "";
-        $ctrl.phone = "";
-        $ctrl.fav = "";
+        $ctrl.registered = true
           
         }
         $ctrl.user =  signup.user

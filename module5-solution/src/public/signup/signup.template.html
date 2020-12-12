@@ -27,8 +27,9 @@
         <input class="form-control" placeholder="enter shortcode eg. L1" ng-model="$ctrl.fav" type="text" name="fav" required>
         <span ng-if="signupForm.fav.$error.required && signupForm.fav.$touched"> We would be grateful if you could fill this out</span>
         </p>
-
         <button class="btn btn-primary" ng-click="$ctrl.submit(signupForm)" >Sign me up!</button>
+         <div ng-if="$ctrl.registered"><h3>Your information has been saved!</h3></div>
     </form>
+   
   </div>
 </div>
